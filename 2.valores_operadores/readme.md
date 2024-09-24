@@ -16,14 +16,20 @@ los datos primitivos en javascript son
 los valores de tipo numero, como es de esperar son numeros y en javascript se escribe o se hace el llamado dee este valor de la siguiente manera
 - numero de tipo entero
 ```js
+// entero positivo
 20
+// enetero negativo
+-20
 // estamos usando un praton de bits para el numero 20 que existira dentro de la memoria de trabajo.
 ```
 - numero de punto flotante decimal fraccion
 ```js
+// decimal positivo
 2.7
 0.
 .0
+// decimal negativo
+-3,6
 ```
 - numeros de tipo notacion cientifica
 ```js
@@ -35,6 +41,15 @@ los valores de tipo numero, como es de esperar son numeros y en javascript se es
 ---
 > [!TIP]
 > cuando javacscript hace trabajo de memoria (cuando crea un patron de bit para almacenar) todo numero som almacenados como decimal positivo.
+#### nuemeros especiales
+en javascript existen tres valores de tipo numero que se concideran dato primitivo numerico de tipo especial 
+```js
+Infinity
+- Infinity 
+NaN //not a number
+// no es un numero
+// cuando el resultado de una operacion es matematicamente imposible.
 
+```
 - tipos (tipos de datos)
 - operadores
