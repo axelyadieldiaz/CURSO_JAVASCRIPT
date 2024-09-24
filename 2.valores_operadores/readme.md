@@ -49,7 +49,6 @@ Infinity
 NaN //not a number
 // no es un numero
 // cuando el resultado de una operacion es matematicamente imposible.
-
 ```
 - tipos (tipos de datos)
 - operadores
