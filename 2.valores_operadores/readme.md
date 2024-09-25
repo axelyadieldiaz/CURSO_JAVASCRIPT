@@ -1,6 +1,8 @@
 # Valores, Tipos y Operadores
 ## indice
-- [ tipos de datos o valores](#valores)
+- [valores, tipos y operadores] (#valores-tipos-y-operadores)
+ - [valores](#valores)
+- [Datos primitivos](#datos-primitivos)
 ## valores
 imagina un mar de bits. una computadora moderna tiene mas de 100 mil millones de bits almacenados en su `memoria de trabajo`o`memoria principal`o`memoria volatil`o`ram`.
 ahora la memnoria no volatil o memoria secundaria tiene estos bits de manera ordenada generalmente apilada como si de un estante de una biblioteca se tratara.
@@ -51,5 +53,17 @@ NaN //not a number
 // cuando el resultado de una operacion es matematicamente imposible.
 ```
 #### Aritmetica (operadores aritmeticos)
+la principal operacion que se pude hacer con numeros es la aritmetica.
+para esot tenemos los operadores aritmeticos como:
+- suma (+).
+- resta (-).
+- multiplicacion (*).
+- division (/).
+- potencia (**).
+- modulo (%).
+**podemos agrupar operaciones con parentecis () las operaciones que esten entre los parentesis se ejecutaran primero**
+consulta el archivo de operadores [aqui](./operadores.js).
+ve los ejercicios [aqui](./ejercicios.js) 
+
 - tipos (tipos de datos)
 - operadores
