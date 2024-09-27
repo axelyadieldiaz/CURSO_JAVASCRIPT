@@ -3,6 +3,10 @@
 - [valores, tipos y operadores] (#valores-tipos-y-operadores)
  - [valores](#valores)
 - [Datos primitivos](#datos-primitivos)
+- [numeros(Number)](#--numeros-number)
+- [aritmetica](#aritmetica-operadores-aritmeticos)
+- [cedenas](#cadenas)
+
 ## valores
 imagina un mar de bits. una computadora moderna tiene mas de 100 mil millones de bits almacenados en su `memoria de trabajo`o`memoria principal`o`memoria volatil`o`ram`.
 ahora la memnoria no volatil o memoria secundaria tiene estos bits de manera ordenada generalmente apilada como si de un estante de una biblioteca se tratara.
@@ -64,6 +68,70 @@ para esot tenemos los operadores aritmeticos como:
 **podemos agrupar operaciones con parentecis () las operaciones que esten entre los parentesis se ejecutaran primero**
 consulta el archivo de operadores [aqui](./operadores.js).
 ve los ejercicios [aqui](./ejercicios.js) 
+#### cadenas 
+el siguiente tipo de dato primitivo es la `cadena` - `string`.
+¿para que sirve las cadenas en javascript?
+- para representar texto 
+se escribe encerrando su contenido entre comillas:
+```js
+"soy un texto" // comillas dobles
+'tambien soy un texto' // comillas simples 
+`yo tambien soy` // acento grave
 
+// cadena vacia
+""
+" "
+```
+**problema** - como representamos un texto entre comillas para hacer el uso decomlillas dentro del contenido de una cadena podemos seguir las siguientes recomendaciones:
+```js
+// si nuestro texto tiene que estar entre comillas simples
+"'este texto se muestra entre comillas simples'"
+// si nuestro texto tiene que estar entre comillas dobles
+'"este texto se muestra entre comillas dobles"'
+//si nuestro texto tendra tanto comillas dobles como simples
+`'esta en la comillas simples', "esta en comillas dobles"`
+```
+otra manera de hacer lo antes mencionados es haciendo uso de la barra invertida `\` tambien conocido como `caracter de escape`.
+hacer uso de este caracter indica el caracter posterior tendra un significado especial.
+```js
+"de este texto solo esta \"palabra\" estara en comillas "
+```
+**problema** - deseamos aggrgar un salto de linea en nuestro texto.
+```js
+// solucionasmos este problema hacdiendo uso de los acentos graves
+`primera linea
+segunda linea`
+```
+antes de la incorporacion de es6 en el uso de acentos graves se utilizaba el caracter de escape`\`
+```js
+" esta es mi primera linea \n y esta es la segunda linea"
+```
+**problema** -deseo tabular en texto
+```js
+`
+este texto no esta tabulado
+     este texto si esta tabulado 
+`
+```
+ahora tabularemos haciendo uso del caracter de escape
+```js
+"si tabular \t y tabulado "
+```
+#### concatenacion
+el unico operador aritmetico que puede ser usado por cadenas es el operador de suma(+) puede ser usado en dos o mas cadenas y pasa a llamar operador de concetenacion, lo que realizar es unir cadena en una sola.
+```js
+"hola"+" "+"mundo "
+```
+#### plantillas literales
+las pantillas literales mencionadas anteriormente con el nombre de acentros graves son usadas para mostrar texto literal, tambien nos permite ejecutar codigo javascript dentro de una plantilla literal el codigo o el resulatdo de este codigo sera transformado en un dato de tipo texto y se incluira en la posicion en que se encuentre.
+para hacer uso de esta funcionalidad debemos usar, la siguiente expresion `${}`.
+```js
+// creando una plantilla literal - template literals
+``
+// usando js dentro de una plantilla literal
+`la suma de 1+1 es ${1+1}`
+```
+> [!TIP]
+> se dice literal por que en el formato que codificamos sera mostrado de esa misma forma en la consola
 - tipos (tipos de datos)
 - operadores
