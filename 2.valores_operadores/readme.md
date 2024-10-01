@@ -6,6 +6,10 @@
 - [numeros(Number)](#--numeros-number)
 - [aritmetica](#aritmetica-operadores-aritmeticos)
 - [cedenas](#cadenas)
+- [concatenacion](#concatenacion)
+- [plantillas](#plantillas-literales)
+- [operadores unarios](#operadores-unarios)
+- [valores boleanos](#valores-boleanos)
 
 ## valores
 imagina un mar de bits. una computadora moderna tiene mas de 100 mil millones de bits almacenados en su `memoria de trabajo`o`memoria principal`o`memoria volatil`o`ram`.
@@ -133,5 +137,33 @@ para hacer uso de esta funcionalidad debemos usar, la siguiente expresion `${}`.
 ```
 > [!TIP]
 > se dice literal por que en el formato que codificamos sera mostrado de esa misma forma en la consola
-- tipos (tipos de datos)
-- operadores
+
+#### operadores unarios
+no todos los operadores son simbolos, algunos se escriben como palabras.
+un ejemplo es el operador `typeof` este operador produce un valor de cadena que indica el tipo del valor que le proporcionamos.
+
+`operadores binarios` se les conoce por que opera sobre dos valores `2*5`
+`operadores uniarios` por que solo trabaja con un valor.
+```js
+// para poder ver su funcionalidad o el valor que genera siemore debemos mostrarlo en un console
+console.log(typeof 5)
+```
+#### valores boleanos
+este tipo de dato primitivo es util cuando tenemos en valor que distinga solo entre dos posibilidades, como `si` y `no` o `encendido` y `apagado`.
+para este proposito, javascript tiene un tipo de dato `Booleano` que tiene dos valores `true` y `false`.
+**que formas de producir valores voleanos tenemos?**
+1. **usando operadores de comparacion**
+los operadores de comparacion son los siguientes
+- mayor que(>).
+- menos que (<).
+- mayor o igual que (>=).
+- manor o igual que (<=).
+- igual a (==).
+- estrictamente igual (===).
+- no es igual a (!=).
+2. **usando los operadores logicos**
+javascript soporta tres operadores logicos 
+- and (y) representacion en javascript `&&`,
+- or (o) representancion en javascript `||`,
+- not (no) representacion en javascript `!`,
+**observacion** este es un operador unario que su funcion es invertir el valor que tiene a su derecha `!true` produce `false`
