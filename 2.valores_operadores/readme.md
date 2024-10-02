@@ -10,6 +10,7 @@
 - [plantillas](#plantillas-literales)
 - [operadores unarios](#operadores-unarios)
 - [valores boleanos](#valores-boleanos)
+- [operador ternario](#operador-ternario)
 
 ## valores
 imagina un mar de bits. una computadora moderna tiene mas de 100 mil millones de bits almacenados en su `memoria de trabajo`o`memoria principal`o`memoria volatil`o`ram`.
@@ -169,3 +170,19 @@ javascript soporta tres operadores logicos
 - or (o) representancion en javascript `||`,
 - not (no) representacion en javascript `!`,
 **observacion** este es un operador unario que su funcion es invertir el valor que tiene a su derecha `!true` produce `false`
+> [!TIP]
+> **AND `&&` `??`** - sin tenemos dos valores verdaderos devolvera el segundo valor verdadero, si tenemos un valor falso y uno verdadero devolvera el valor falso.
+
+> [!TIP]
+> **OR `||`** - si tenemos dos valores verdaderos devolvera el primer valor verdadero, si tenemos un valor un valor verdadero y uno falso devolvera el valor verdadero el cualquier pocicion que se encuentre.
+3. **usando el operador relacional**
+este operador compara sus valores y retorna un boleano como resultado. lo que evalua este operador es si una propiedad especifica se encuentra en un objeto.
+evalua que si el pi¿rimer valor que se encuentra a su izquierda existe o forma parte del segundo valor que se encuentra a su derecha.
+```js
+"a" in ["a","e","i","o","u"]
+```
+#### operador ternario
+este operador trabaja con tres valores.
+el primer valor es el que determinara si se muestra el resto de valores.
+eso quiere decir que si el primer valor es verdadero mostrara el segundo valor mientras que si falso mostrar el tercer valor.
+
