@@ -69,6 +69,8 @@ para esot tenemos los operadores aritmeticos como:
 - division (/).
 - potencia (**).
 - modulo (%).
+- incremento (++).
+- decrementop (--).
 **podemos agrupar operaciones con parentecis () las operaciones que esten entre los parentesis se ejecutaran primero**
 consulta el archivo de operadores [aqui](./operadores.js).
 ve los ejercicios [aqui](./ejercicios.js) 
