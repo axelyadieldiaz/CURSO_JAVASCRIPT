@@ -117,6 +117,22 @@ else if (totaL_compra > 100 && total_compra <500){
 }
 
 ```
+- **condicion multiple `switch`**
+javasecript dispone de una opcion para crear estraucturas condicionales miltiples `switch` permite crear estructuras mas optimisadas para cubrir un amplio abanico de posibilidades 
+```js
+let edad=number(prompt("ingrese su edad"))
+switch(edad){
+  case 4:
+    consolo.log("tienes 4 años")
+    break
+  case 8:
+    console.log("tienes 8 años")
+    break
+  default:
+    console.log("tienes:", edad)
+    break 
+}
+```
 ### Bucles
 consideremos el siguiente problema 
 crear un programa que imprima los numeros del 1 al 12 una forma de hacerlo seria el siguiente:
