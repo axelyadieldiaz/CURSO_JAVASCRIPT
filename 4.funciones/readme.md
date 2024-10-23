@@ -132,3 +132,4 @@ let registroUsuario=(nombre,apellido)=>{
 
 console.log(registroAlumno("edwin","cachondo"))
 ```
+### diferencias 
