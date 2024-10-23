@@ -3,6 +3,8 @@
 - [tipos de argumentos y parametros](#tipos-de-argumetos-y-parametros)
     - [posicionales](#argumentos-y-parametros-posicioneales)
     - [nominales](#argumentos-y-parametros-nominales)
+- [tipos de funciones por su notacion](#tipos-de-funciones-por-su-notacion)
+    - [funciones como valor](#funciones-como-valor)
 las funciones en javascript son `bloques de codigo ejecutable`, a los que podemos pasar parametros y operar con ellos.
 nos sirve para modular (modularizar) nuestros programas y estructurarlos en bloques que `realizen una tarea concreta`, de esta manera nuestro codigo es mas legible y mantenible.
 las funciones normalmente al acabar su ejecucion `devuelven un valor`, que conseguimos con el parametro `retrun`
@@ -81,3 +83,52 @@ registroAlumno("jory","redrigues","todos los dias")
 ```
 > [!INFO]
 > posicionales en orden y Nominales especificar el parametro y su valor
+
+## tipos de funciones por su notacion
+### funciones como valor
+en este caso se crea una funcion como si fuera un valor de un enlace.
+```js
+let saludo=function(){
+    console.log("bienvenido")
+}
+saludo()
+```
+en este caso el nombre de la funcion sera el nombre que le pongamos al enlace y para llamarlo o ejecutarlo debemos poner el nombre del enlace mas los parentesis.
+al igual que una funcion clasica podemos tambien pasarle parametros.
+
+### funcion como declaracion
+se le conoce como funcion `declarativa` a la manera clasica de como creamos una funcion.
+```js
+function saludo(){
+    return "saludo a todos"
+}
+console.log(saludo())
+```
+### funcion de flecha (arrow function)
+esta funcion es introducida a partir de la version de ecma script 5 `es5`.
+se implemento para la creacion y ejecucion rapida y mas entendible de las funciones.
+la funcion flecha le `verbosidad` en javascript
+> [!NOTE]
+> `verbosidad` o `verboso` se utiliza en la progrmacion para referirce a un codigo que necesita demaciadas lineas de codigo o nocesita cumplir estrictamente una serie de reglas podemos comprar la `verbosidad` a un texto demaciado o rodundante.
+se crea de la misma manera que una funcion como valor, eso quiere decir que la funcion flecha sera el valor de un enlace.
+ la funcion flecha tiene la siguiente estructura.
+el parametro seguido del simbolo flecha `=>` y del cuerpo de ser necesario o solo de codigo que retornara 
+```js
+funxtion saludo(){
+    return "hola mundo"
+}
+console.log(saludo())
+
+let saludo=()=>("hola mundo")
+console.log(saludo())
+
+let mensaje=texto=>console.log("hola, "texto)
+console.los(mensaje("el primo"))
+// en el caso de tener mas de un parametro y ejecutar mas de una sola linea de codigo
+let registroUsuario=(nombre,apellido)=>{
+    let alumno=`${nombre}, ${apellido}`
+    return alumno
+}
+
+console.log(registroAlumno("edwin","cachondo"))
+```
