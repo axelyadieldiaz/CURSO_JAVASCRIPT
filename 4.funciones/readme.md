@@ -196,4 +196,46 @@ function retornaValor(n){
 retornaValor(10)()
 ```
 > [!NOTE]
-> las funciones `closure` son usadas por que pueden mantener el valor de sus enlaces o variables locales en todo el proceso de la ejecucion de su funcion padre.
+> las funciones `closure` son usadas por que pueden mantener el valor de sus enlaces o variables locales en todo el proceso de la ejecucion de su funcion padre por cada llamada que se le realize.
+
+### closure tipo clase
+son funciones cuyo uso son iguales a las clases dentro de la ejecucion de una clase tenemos lo que se llama como `instancia` en javascript tenemos funciones `closure` que se pueden instanciar al igual que una clase, la diferencia con las funciones `closure` clasicas es que en esta hacemos una de la palabra reservada `keyword` llama `this`.
+```javascript
+function contador(){
+    this.contador=0
+    this.incre=function(){
+        this.contador++
+    }
+    this.decre=function(){
+        this.contador--
+    }
+}
+//realizamos la instancia
+let count1=new contador()
+console.log(count1.contador)
+count1.incre()
+console,log(count1.contador)
+```
+> [!NOTE]
+> la funcion closure de tipo clase no hace uso de `return` en sus funciones al hacer uso de `this` cada funcion o variable estara enlazada al objeto que se cree
+
+> [!WARNING]
+> wl problema principal de este tipo de funcion es que cuando creamos un nuevo objeto a partir de la funcion tipo clase resercara espacio en memoria para toda la clase y sus valores creados eso quiere decir variable y funciones, cada vez que llamamos a una funcion esta aplicada en memoria.
+
+## protoype (tarea-averiguar y sus ejemplos)
+En JavaScript, un prototipo es un mecanismo que permite a los objetos y las funciones "heredar" propiedades y métodos de otros objetos. Este concepto es fundamental en JavaScript, ya que permite crear objetos y modelos de herencia sin necesidad de clases, aunque las clases modernas en JavaScript también usan prototipos internamente.
+
+¿Cómo funcionan los prototipos en JavaScript?
+Cada objeto en JavaScript tiene una propiedad interna llamada [[Prototype]] (a la que podemos acceder con Object.getPrototypeOf(obj) o con la propiedad __proto__). Esta propiedad hace referencia a otro objeto, y este, a su vez, puede tener su propio prototipo, formando una cadena llamada cadena de prototipos.
+```js
+const persona = {
+  saludar() {
+    console.log(`Hola, mi nombre es ${this.nombre}`);
+  }
+};
+
+const juan = Object.create(persona);
+juan.nombre = "Juan"
+juan.saludar()
+
+```
