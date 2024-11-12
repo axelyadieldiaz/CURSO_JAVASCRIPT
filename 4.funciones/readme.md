@@ -239,3 +239,62 @@ juan.nombre = "Juan"
 juan.saludar()
 
 ```
+para crear un Prototype tendremos que crear primero nuestra funcion principal que es la encargada de almacenar nuestras variables locales con las que trabajaremos,
+luego accederemos al prototype de nuestra funcion creada y en valor o variable de tipo objeto le indicaremos las funciones que tendra nuestra funcion principal que interactuara con nustras variables locales.
+```js
+function Contador(){
+    this.count=0
+    this.nombre=nombre
+}
+Contador.prototype={
+    incremento:function(){
+        this.count++
+    },
+    decremento:function(){
+        thid.count-- 
+    },
+    mostraDatos:funcion(){
+        retrun '${this.count}, ${this.nombre}'
+    }
+}
+// instanciar mi funcion
+let contadorUno=Contador("el primo")
+console.log(contadorUno.mostraDatos())
+```
+> [!NOTE]
+> es una convencion usar como nombre de nuestra funcion principal, 1. que debe ser singular, 2. que use PascalCase
+## RECURSION EN FUNCIONES (tareas)
+## FUNCIONES CALLBACKS (tareas)
+# CLASES
+las clases en java script lleguan en la version `ECMAScript 6`, javascript no tenia al igual que otros lenguajes de programacion orientados a objetos las `clases` ya que js se enfocaba en lñas `programacion funcional`, sin embargo con la llegada es`ES6`, javascript adopta ser un lenguaje de programacion multiparadigma, entre ellos la `programacion orientada a objetos` con lña llegada de las `clases`.
+## estructura de una clase en javascript.
+una clase esta separada en tres grandes secciones.
+1. el nombre de la clase que debera ser un singular y deberan estar escritos en pascalCase.
+2. debera tener atributos estos deberan ser sustantivos y estar escristos en CamelCase.
+3. debera tenr metodos (acciones, funciones) estos deberan ser verbos y estas escritos en CamelCase.
+```js
+class Computadora{
+    //atributo
+    constructor(marca){
+        this.marca=marca
+        this.color=""
+        this.tipoCase="tower"
+    }
+    //metodos
+    encender(){
+        return "estoy encendiendo"
+    }
+    apagar(){
+        return "estoy cerrando seccion y7 guardando informacion"
+    }
+    escribir(){
+        return "estoy erscribiendo"
+    }
+    jugar(){
+        return "estoy jugando"
+    }
+
+}
+// instanciar
+ley miPC=new computador ("gigabytyte")
+```
