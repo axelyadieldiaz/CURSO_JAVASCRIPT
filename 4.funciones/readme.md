@@ -264,7 +264,130 @@ console.log(contadorUno.mostraDatos())
 > [!NOTE]
 > es una convencion usar como nombre de nuestra funcion principal, 1. que debe ser singular, 2. que use PascalCase
 ## RECURSION EN FUNCIONES (tareas)
+Aquí tienes una versión más resumida para tu tarea en JavaScript, manteniendo los conceptos clave:
+
+---
+
+### Tarea: Funciones Recursivas en JavaScript
+La recursión es una técnica de programación en la que una función se llama a sí misma para resolver un problema. Es útil cuando un problema se puede dividir en subproblemas más simples, pero requiere un **caso base** que detenga la recursión.
+
+---
+
+### 1. Función Recursiva para Calcular el Factorial
+
+El **factorial** de un número \( n \) es el producto de todos los números enteros de 1 a \( n \). Se define recursivamente como:
+\[
+n! = n \times (n-1)!
+\]
+El caso base es \( 1! = 1 \).
+
+#### Código en JavaScript:
+
+```javascript
+function factorial(n) {
+    if (n === 1) return 1;  // Caso base
+    return n * factorial(n - 1);  // Llamada recursiva
+}
+
+console.log(factorial(5));  // 120
+```
+
+---
+
+### 2. Función Recursiva para la Serie de Fibonacci
+
+La **serie de Fibonacci** es una secuencia donde cada número es la suma de los dos anteriores:
+\[
+F(0) = 0, \quad F(1) = 1, \quad F(n) = F(n-1) + F(n-2)
+\]
+
+#### Código en JavaScript:
+
+```javascript
+function fibonacci(n) {
+    if (n === 0) return 0;  // Caso base
+    if (n === 1) return 1;  // Caso base
+    return fibonacci(n - 1) + fibonacci(n - 2);  // Llamada recursiva
+}
+
+console.log(fibonacci(6));  // 8
+```
+
+---
+
+### 3. Optimización con Memorización (Fibonacci)
+
+La recursión en Fibonacci puede ser ineficiente debido a cálculos redundantes. Usamos **memorización** para almacenar resultados intermedios y mejorar la eficiencia.
+
+#### Código con Memorización:
+
+```javascript
+function fibonacciMemo(n, memo = {}) {
+    if (n === 0) return 0;
+    if (n === 1) return 1;
+    if (memo[n]) return memo[n];  // Resultado almacenado
+
+    memo[n] = fibonacciMemo(n - 1, memo) + fibonacciMemo(n - 2, memo);
+    return memo[n];
+}
+
+console.log(fibonacciMemo(6));  // 8
+```
+---
+
+### Conclusión:
+La recursión es útil para problemas que se pueden dividir en subproblemas. Vimos cómo calcular el **factorial** y los números de **Fibonacci** de forma recursiva. Además, aprendimos a optimizar la recursión con memorización para mejorar el rendimiento.
+
+---
 ## FUNCIONES CALLBACKS (tareas)
+### Funciones Callback en JavaScript
+
+Una **función callback** es una función que se pasa como argumento a otra y se ejecuta después de que esta última termine su tarea. Es común en operaciones asincrónicas como lecturas de archivos o peticiones HTTP.
+
+#### Ejemplo Básico:
+
+```javascript
+function saludo(nombre, callback) {
+    console.log("Hola, " + nombre);
+    callback();  
+}
+
+function despedida() {
+    console.log("¡Adiós!");
+}
+
+saludo("Juan", despedida);
+```
+
+**Salida**:
+```
+Hola, Juan
+¡Adiós!
+```
+
+En este ejemplo, la función `saludo` recibe una función `callback` (en este caso, `despedida`), y la ejecuta después de saludar.
+
+#### Función Callback con `setTimeout`:
+
+```javascript
+function mostrarMensaje() {
+    console.log("Este mensaje aparece después de 2 segundos.");
+}
+
+setTimeout(mostrarMensaje, 2000);  
+```
+
+**Salida (después de 2 segundos)**:
+```
+Este mensaje aparece después de 2 segundos.
+```
+
+#### Consideraciones:
+- **Asincronía**: Los callbacks son útiles para manejar tareas que no bloquean el hilo principal, como operaciones de red o temporizadores.
+- **Callback Hell**: Si anidas demasiados callbacks, el código puede volverse difícil de manejar. Para solucionar esto, se utilizan **promesas** o **async/await**.
+
+---
+
 # CLASES
 las clases en java script lleguan en la version `ECMAScript 6`, javascript no tenia al igual que otros lenguajes de programacion orientados a objetos las `clases` ya que js se enfocaba en lñas `programacion funcional`, sin embargo con la llegada es`ES6`, javascript adopta ser un lenguaje de programacion multiparadigma, entre ellos la `programacion orientada a objetos` con lña llegada de las `clases`.
 ## estructura de una clase en javascript.
